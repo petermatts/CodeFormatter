@@ -1,0 +1,7 @@
+# Setup stuff
+.vscode*
+.eslintrc.json
+tsconfig.json
+
+#Node Modules
+node_modules
