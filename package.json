@@ -1,10 +1,10 @@
 {
-  "name": "codeformatter",
+  "name": "CodeFormatter",
   "displayName": "CodeFormatter",
-  "description": "",
+  "description": "Tool for automatically properlly formatting/styling code.",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.81.0"
+    "vscode": "^1.82.0"
   },
   "categories": [
     "Other"
@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "codeformatter.helloWorld",
-        "title": "Hello World"
+        "command": "CodeFormatter.test",
+        "title": "Test"
       }
     ]
   },
@@ -28,7 +28,7 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.81.0",
+    "@types/vscode": "^1.82.0",
     "@types/glob": "^8.1.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "20.2.5",

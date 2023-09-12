@@ -1,10 +1,8 @@
-# Setup stuff
-.vscode*
-.eslintrc.json
-tsconfig.json
-
-#Node Modules
+#
+.vscode
 node_modules
 
-#Out
-out
+.eslintrc.json
+.vscodeignore
+
+**/*.js.map
