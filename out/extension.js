@@ -9,7 +9,8 @@ const vscode = require("vscode");
 function activate(context) {
     // Use the console to output diagnostic information (console.log) and errors (console.error)
     // This line of code will only be executed once when your extension is activated
-    console.log('Congratulations, your extension "CodeFormatter" is now active!');
+    // console.log('Congratulations, your extension "CodeFormatter" is now active!');
+    // NOTE: to build and compile for debugging run F5 on this file
     // The command has been defined in the package.json file
     // Now provide the implementation of the command with registerCommand
     // The commandId parameter must match the command field in package.json
@@ -17,16 +18,15 @@ function activate(context) {
         // The code you place here will be executed every time your command is executed
         // Display a message box to the user
         let message;
-        if (vscode.workspace.workspaceFolders !== undefined) {
-            let wf = vscode.workspace.workspaceFolders[0].uri.path;
-            let f = vscode.workspace.workspaceFolders[0].uri.fsPath;
-            console.log(vscode.workspace);
-            message = `YOUR-EXTENSION: folder: ${wf} - ${f}`;
-            vscode.window.showInformationMessage(message);
+        console.log(vscode.workspace);
+        message = vscode.window.activeTextEditor?.document.fileName || "Error: no selected file";
+        if (message === "Error: no selected file") {
+            vscode.window.showErrorMessage(message);
+            console.log(message);
         }
         else {
-            message = "YOUR-EXTENSION: Working folder not found, open a folder an try again";
-            vscode.window.showErrorMessage(message);
+            vscode.window.showInformationMessage(message);
+            console.error(message);
         }
     });
     context.subscriptions.push(disposable);
