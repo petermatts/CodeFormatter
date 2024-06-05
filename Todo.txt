@@ -1,0 +1,6 @@
+- complications determining indent breaks for python (when code intends to end a block like an if or a loop) best first steps are to build the formatting algorithm so that it assuse that the python file is already properly indented
+    - afterall this is a formatter not a debugger
+- Java and C/C++ may be able to have a consistent formatting algorithm
+- JS might be able to as well but it is a bit different
+- get a list of file extensions and map them to the correct formatting algorithm, JSON object probably
+- Make more test files
